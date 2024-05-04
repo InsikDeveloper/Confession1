@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession Box</title>
+    <style>
+        body{
+            background-color: gray;
+            color: rgb(255, 255, 255);
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 3rem;
+            font-family: fantasy;
+        }
+
+        button{
+            position: absolute;
+            padding: .5rem 1rem;
+            border: none;
+            font-weight: bold;
+            color: white;
+        }
+
+        .yes{
+            height: 5rem;
+            width: 8rem;
+            font-size: larger;
+            border-radius: 20px;
+            background-color: rgb(92, 245, 92);
+        }
+        .no{
+            border-radius: 10px;
+            margin-left: 30rem;
+            background-color: rgb(253, 76, 76);
+            top: 29rem;
+        }
+
+        button:hover{
+            opacity: .9;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        section{
+            background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWhvemhzMzRxcmFmeWo2dTZ3bmN3c2RvN21hdzU5aWZzd3ZibXRiOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l6b1QYVQ8qLhefyLeg/giphy.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 500px;
+            width: 700px;
+            position: absolute;
+            border-radius: 20px;
+        }
+
+        img{
+            width: 500px;
+            height: 500px;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+        }
+
+
+
+        @media (max-width: 724px){
+           *{ font-size: 2rem;
+           }
+           .container{
+            width: 500px;
+           }
+
+           .yes{
+            height: 2.5rem;
+            width: 5rem;
+            font-size: 1.5rem;            
+            }
+
+            .no{
+            top: 13rem;
+           left: 13.5rem;
+           margin: 0;
+           height: 1.5rem;
+           width: 3rem;
+           font-size: .5rem;            
+
+
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container" id="container" >
+        <div class="box">
+
+
+            <p id="message"></p>
+            <h1>Crush mo ba ako?</h1>
+
+            <button class="yes" id="yes">Oo</button>
+            <button class="no" id="no">Hindi</button>
+        </div>
+
+    </div>
+
+  
+    <script>
+        const yes = document.getElementById('yes');
+        const no = document.getElementById('no');
+        const mes = document.getElementById('message');
+        const container = document.getElementById('container');
+
+        let count = 1;
+
+       no.addEventListener('click',()=>{
+
+        count++;
+
+        let x = parseInt(Math.random() * 500 + 1);
+        let y = parseInt(Math.random() * 300 + 1);
+
+        no.style.top = `${x}px`;
+        no.style.left = `${y}px`;
+
+        checker(count);
+       });
+
+       yes.addEventListener('click',()=> {
+            
+            mes.textContent = "wait what?😳"
+            container.appendChild(document.createElement('section'));
+       });
+
+      
+
+
+
+
+       function checker(n){
+         if( n >= 3)
+          mes.textContent = "Hindi?";
+         if( n >= 5)
+          mes.textContent = "Sure ka?🙂";
+         if( n >= 7)
+          mes.textContent = "Hindi tlga?🙄";
+         if( n >= 9)
+          mes.textContent = "As in?🙁";
+         if( n >= 10)
+          mes.textContent = "Weeeeee?😤";
+         if( n >= 11)
+          mes.textContent = "Cge yan gusto mo eh😒";
+         if( n >= 12)
+          mes.textContent = "Cge yan gusto mo eh😒";
+         if( n >= 13)
+          mes.textContent = "Final naba?🤨";
+         if( n >= 14)
+          mes.textContent = "Kawawa nmn ako oh😓";
+         if( n >= 14)
+          mes.textContent = "😭😭😭😭😭😭😭😭😭";
+         if( n == 15)
+          alert('Mamalasin ka habang buhay halah cge ka....');
+         if( n >= 16)
+          alert('Umalis kana ayaw mo eh😤');       
+       }
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- /* background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHFuYmxndjhoZ2Rha2czc29rMzV4bmtidzl0cnMwMTFkd2JmeXY2NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GdtoKJL4Ls6BuKzJlz/giphy.gif'); */ -->
